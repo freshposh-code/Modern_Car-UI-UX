@@ -13,6 +13,8 @@ export interface CustomButtonProps {
 export interface SearchmanufacturerProps {
     manufacturer: string;
     setManufacturer: (manufacturer: string) => void;
+    selected: string;
+    setSelected: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export interface CarProps {
