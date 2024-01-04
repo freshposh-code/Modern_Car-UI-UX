@@ -19,8 +19,8 @@ export default function Home() {
   const [model, setModel] = useState('')
 
   // Filter states
-  const [fuel, setFuel] = useState('')
-  const [year, setYear] = useState(2022)
+  const [fuel, setFuel] = useState<string>('')
+  const [year, setYear] = useState<number>(2022)
 
   // Pagination Staes
   const [limit, setLimit] = useState(10)

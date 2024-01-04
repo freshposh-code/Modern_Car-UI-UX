@@ -49,11 +49,12 @@ export interface OptionsProps {
     title: string;
     value: string;
 }
+type SetFilter = Dispatch<SetStateAction<string>> | Dispatch<SetStateAction<number>>;
 
 export interface CustomFilterProps {
     title: string;
     options: OptionsProps[];
-    setFilter: Dispatch<SetStateAction<string>>;
+    setFilter: SetFilter;
 }
 
 export interface ShowMoreProps {
