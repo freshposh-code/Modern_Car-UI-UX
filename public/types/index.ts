@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react";
+import { Dispatch, MouseEventHandler, SetStateAction } from "react";
 
 export interface CustomButtonProps {
     title :string;
@@ -51,7 +51,7 @@ export interface OptionsProps {
 export interface CustomFilterProps {
     title: string;
     options: OptionsProps[];
-    setFilter: string;
+    setFilter: Dispatch<SetStateAction<string>>;
 }
 
 export interface ShowMoreProps {
