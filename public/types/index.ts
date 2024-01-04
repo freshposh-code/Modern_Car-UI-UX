@@ -59,5 +59,5 @@ export interface CustomFilterProps {
 export interface ShowMoreProps {
     pageNumber: number;
     isNext: boolean;
-    setLimit: Dispatch<SetStateAction<string>>
+    setLimit: Dispatch<SetStateAction<number>>
 }
