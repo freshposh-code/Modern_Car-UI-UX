@@ -42,6 +42,8 @@ const SearchBar: React.FC<SearchBarProps> = ({setManufacturer, setModel}) => {
     <form className='searchbar' onSubmit={handleSearch}>
         <div className="searchbar__item">
             <SearchManufacturer 
+           manufacturer={searchManufacturer}
+           setManufacturer={setSearchManufacturer}
             selected={searchManufacturer}
             setSelected={setSearchManufacturer}
             />
