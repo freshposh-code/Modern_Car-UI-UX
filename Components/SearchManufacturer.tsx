@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import {useState, Fragment} from "react"
 import { Combobox, Transition } from '@headlessui/react'
-import { SearchmanufacturerProps } from '@/types'
+import { SearchmanufacturerProps } from '@/public/types'
 import { manufacturers } from '@/Constants'
 
 const SearchManufacturer = ({selected,  setSelected}: SearchmanufacturerProps) => {

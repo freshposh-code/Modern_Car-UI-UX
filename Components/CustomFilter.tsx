@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Listbox, Transition } from "@headlessui/react";
 import { updateSearchParams } from "@/Utils";
-import { CustomFilterProps } from "@/types";
+import { CustomFilterProps } from "@/public/types";
 
 
 
