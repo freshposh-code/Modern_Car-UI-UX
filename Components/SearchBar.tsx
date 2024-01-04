@@ -8,6 +8,8 @@ import { useRouter } from "next/navigation"
 interface SearchBarProps {
   setManufacturer: Dispatch<SetStateAction<string>>;
   setModel: Dispatch<SetStateAction<string>>;
+  selected: string;
+  setSelected: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const SearchButton = ({otherClasses}: {otherClasses: string}) => {
