@@ -1,16 +1,14 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { Fragment, SetStateAction, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Listbox, Transition } from "@headlessui/react";
-import { updateSearchParams } from "@/Utils";
 import { CustomFilterProps } from "@/public/types";
 
 
 
 export default function CustomFilter({ options, setFilter }: CustomFilterProps) {
-  const router = useRouter();
   const [selected, setSelected] = useState(options[0]); // State for storing the selected option
 
   return (
@@ -19,7 +17,8 @@ export default function CustomFilter({ options, setFilter }: CustomFilterProps) 
         value={selected}
         onChange={(e) => {
           setSelected(e); // Update the selected option in state
-          setFilter(e.value)
+          setFilter(e.value as SetStateAction<string> & SetStateAction<number>);
+
         }}
       >
         <div className='relative w-fit z-10'>
