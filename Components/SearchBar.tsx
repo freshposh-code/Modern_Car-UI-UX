@@ -1,9 +1,14 @@
 'use client'
 
-import {useState} from "react"
+import React, {Dispatch, SetStateAction, useState} from "react"
 import SearchManufacturer from "./SearchManufacturer"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
+
+interface SearchBarProps {
+  setManufacturer: Dispatch<SetStateAction<string>>;
+  setModel: Dispatch<SetStateAction<string>>;
+}
 
 const SearchButton = ({otherClasses}: {otherClasses: string}) => {
   return (
@@ -16,7 +21,7 @@ const SearchButton = ({otherClasses}: {otherClasses: string}) => {
   )
 }
 
-const SearchBar = ({setManufacturer, setModel}) => {
+const SearchBar: React.FC<SearchBarProps> = ({setManufacturer, setModel}) => {
   const [searchManufacturer, setSearchManufacturer] = useState('')
   const [searchModel, setSearchModel] = useState('')
 
