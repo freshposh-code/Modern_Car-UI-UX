@@ -1,4 +1,4 @@
-import { Dispatch, MouseEventHandler, SetStateAction } from "react";
+import React, { Dispatch, MouseEventHandler, SetStateAction } from "react";
 
 export interface CustomButtonProps {
     title :string;
@@ -59,4 +59,5 @@ export interface CustomFilterProps {
 export interface ShowMoreProps {
     pageNumber: number;
     isNext: boolean;
+    setLimit: Dispatch<SetStateAction<string>>
 }
