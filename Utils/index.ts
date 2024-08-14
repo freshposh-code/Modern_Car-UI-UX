@@ -3,7 +3,7 @@ import { CarProps, FilterProps } from "@/public/types";
 export async function fetchcars(filters: FilterProps) {
   const { manufacturer, year, model, limit, fuel } = filters;
   const headers = {
-    'X-RapidAPI-Key': process.env.NEXT_PUBLIC_RAPID_API_KEY || "",
+    'X-RapidAPI-Key': 'ee3774757cmsh578da00a94fb746p1b3bb8jsnc178adc02f26',
     'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
   }
 
@@ -39,18 +39,16 @@ export const generateCarImageUrl = (car: CarProps, angle?: string) => {
   const url = new URL("https://cdn.imagin.studio/getimage");
   const { make, model, year } = car;
 
-  url.searchParams.append('customer', process.env.NEXT_PUBLIC_IMAGE_API_KEY || '');
+  url.searchParams.append('customer', 'hrjavascript-mastery' || '');
   url.searchParams.append('make', make);
   url.searchParams.append('modelFamily', model.split(" ")[0]);
   url.searchParams.append('zoomType', 'fullscreen');
   url.searchParams.append('modelYear', `${year}`);
-  url.searchParams.append('angle', `${angle || 'front'}`);
+  // url.searchParams.append('zoomLevel', zoomLevel);
+  url.searchParams.append('angle', `${angle}`);
 
-  console.log(url.toString()); // Log to check the final URL
-
-  return url.toString(); // Ensure it's a string
+  return `${url}`;
 }
-
 
 export const updateSearchParams = (type: string, value: string) => {
   // Get the current URL search params
